@@ -18,6 +18,20 @@ obj/
 # Rider IDE files
 .idea/
 
+# Environment files
+.env
+.env.local
+.env.production
+.env.staging
+
+# Logs
+logs/
+*.log
+
+# Database
+*.db
+*.sqlite
+
 # NuGet Packages
 *.nupkg
 packages/
