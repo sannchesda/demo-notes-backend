@@ -1,0 +1,47 @@
+# Build Folders
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.generated.cs
+*.g.cs
+
+# Visual Studio files
+.vs/
+
+# Rider IDE files
+.idea/
+
+# NuGet Packages
+*.nupkg
+packages/
+
+# Resharper files
+_ReSharper*/
+*.DotSettings.user
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Publish output
+publish/
+
+# Azure Pipelines
+.vscode/
+
+# Rider & VSCode settings
+*.sln.ide
+
+# Others
+*.cache
+*.config
