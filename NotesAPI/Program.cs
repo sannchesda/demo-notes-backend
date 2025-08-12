@@ -2,15 +2,11 @@ using NotesAPI.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using DotNetEnv;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container
 builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
 
 // Add Health Checks
 builder.Services.AddHealthChecks();
@@ -56,12 +52,6 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
 app.UseHttpsRedirection();
 app.UseCors("AllowVueApp");
 
@@ -71,6 +61,8 @@ app.UseAuthorization();
 
 // Add health check endpoint
 app.MapHealthChecks("/health");
+
+app.MapGet("/", () => "Welcome to the Notes API!");
 
 app.MapControllers();
 
