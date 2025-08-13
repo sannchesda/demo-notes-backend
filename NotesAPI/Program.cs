@@ -43,7 +43,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowVueApp", policy =>
     {
-        policy.WithOrigins("http://localhost:5173", "http://localhost:3000", "http://localhost:5174", "https://notes-frontend-production-fd38.up.railway.app")
+        policy.WithOrigins("http://localhost:5173", "http://localhost:3000", "http://localhost:5174", "https://notes-frontend-production-fd38.up.railway.app", "https://sannchesda.github.io")
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
